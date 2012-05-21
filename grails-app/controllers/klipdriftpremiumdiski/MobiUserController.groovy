@@ -110,4 +110,13 @@ class MobiUserController {
         importer.importFromCSV(params.file)
         redirect(action: "list")
     }
+
+    def assignDiskiNames(){
+        def assigner = new AssignDiskiNamesService()
+
+        def dataSet = MobiUser.findAll()
+        assigner.run(dataSet)
+
+        redirect(action: 'list')
+    }
 }

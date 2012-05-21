@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97bdc203-347b-4af2-9a54-1273e9136789" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.18-bin.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-3.7-20101029.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-ooxml-3.7-20101029.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/poi-ooxml-schemas-3.7-20101029.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/DiskiNameImporterService.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/diskiName/importer.gsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/AssignDiskiNamesService.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CSVBuilderService.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KlipdriftPremiumDiski.iml" afterPath="$PROJECT_DIR$/KlipdriftPremiumDiski.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/MobiUserImporterService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/MobiUserImporterService.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/competitionEntry/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/competitionEntry/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/competitionEntry/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/competitionEntry/list.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/mobiUser/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/mobiUser/list.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
     </list>
     <ignored path="KlipdriftPremiumDiski.iws" />
@@ -71,33 +69,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DiskiName.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/klipdriftpremiumdiski/DiskiName.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/list.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="20" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.5581396">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiskiNameImporterService.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/DiskiNameImporterService.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="124" selection-start="771" selection-end="771" vertical-scroll-proportion="0.72482014">
-              <folding>
-                <element signature="e#31#80#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/diskiName/create.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="38" selection-start="77" selection-end="1322" vertical-scroll-proportion="-9.367347">
+            <state line="15" column="67" selection-start="797" selection-end="813" vertical-scroll-proportion="-5.2040815">
               <folding />
             </state>
           </provider>
@@ -106,7 +81,7 @@
       <file leaf-file-name="DiskiNameController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="32" selection-start="4032" selection-end="4032" vertical-scroll-proportion="-20.956522">
+            <state line="111" column="5" selection-start="4038" selection-end="4038" vertical-scroll-proportion="-16.52174">
               <folding />
             </state>
           </provider>
@@ -127,25 +102,64 @@
       <file leaf-file-name="MobiUserController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="35" selection-start="3971" selection-end="3971" vertical-scroll-proportion="-18.73913">
+            <state line="116" column="30" selection-start="4091" selection-end="4091" vertical-scroll-proportion="-18.73913">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MobiUserImporterService.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/MobiUserImporterService.groovy">
+      <file leaf-file-name="CompetitionEntryController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="84" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+            <state line="137" column="8" selection-start="5123" selection-end="5123" vertical-scroll-proportion="-15.956522">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompetitionEntryImporterService.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CompetitionEntryImporterService.groovy">
+      <file leaf-file-name="CompetitionEntry.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/klipdriftpremiumdiski/CompetitionEntry.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="9" selection-start="181" selection-end="821" vertical-scroll-proportion="0.0">
+            <state line="18" column="11" selection-start="524" selection-end="734" vertical-scroll-proportion="-4.8139534">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssignDiskiNamesService.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/AssignDiskiNamesService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/mobiUser/list.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="104" selection-start="815" selection-end="815" vertical-scroll-proportion="-5.2040815">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVBuilderService.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CSVBuilderService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="32" selection-start="391" selection-end="391" vertical-scroll-proportion="0.48920864">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/_form.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="16" selection-start="3486" selection-end="3486" vertical-scroll-proportion="-7.2244897">
               <folding />
             </state>
           </provider>
@@ -164,18 +178,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/MobiUser.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/competitionEntry/import.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/klipdriftpremiumdiski/CompetitionEntry.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/competitionEntry/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/mobiUser/importer.gsp" />
         <option value="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CompetitionEntryImporterService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/diskiName/importer.gsp" />
         <option value="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/MobiUserImporterService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/DiskiNameImporterService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/competitionEntry/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/AssignDiskiNamesService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/mobiUser/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/competitionEntry/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CSVBuilderService.groovy" />
       </list>
     </option>
   </component>
@@ -505,7 +523,11 @@
       <created>1337603445631</created>
       <updated>1337603445631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="diskiname importer">
+      <created>1337606853304</created>
+      <updated>1337606853304</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -578,7 +600,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="import MobiUsers" />
+    <option name="LAST_COMMIT_MESSAGE" value="diskiname importer" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -594,6 +616,7 @@
     <MESSAGE value="add import gsp" />
     <MESSAGE value="import competitionEntries" />
     <MESSAGE value="import MobiUsers" />
+    <MESSAGE value="diskiname importer" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -633,71 +656,12 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="34" selection-start="84" selection-end="1371" vertical-scroll-proportion="-9.367347">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/klipdriftpremiumdiski/CompetitionEntry.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="734" selection-end="734" vertical-scroll-proportion="-10.674418">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="142" selection-start="5167" selection-end="5167" vertical-scroll-proportion="-8.469388">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/importer.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1560" selection-end="1675" vertical-scroll-proportion="-6.9387755">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/mobiUser/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="54" selection-start="76" selection-end="1315" vertical-scroll-proportion="-9.367347">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="8" selection-start="4331" selection-end="4460" vertical-scroll-proportion="-13.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CompetitionEntryImporterService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="9" selection-start="181" selection-end="821" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/klipdriftpremiumdiski/DiskiName.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="20" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.5581396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="32" selection-start="4032" selection-end="4032" vertical-scroll-proportion="-20.956522">
           <folding />
         </state>
       </provider>
@@ -723,16 +687,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/MobiUserImporterService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="35" selection-start="3971" selection-end="3971" vertical-scroll-proportion="-18.73913">
+        <state line="18" column="84" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/MobiUserImporterService.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/DiskiNameImporterService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="84" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+        <state line="24" column="124" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#31#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="67" selection-start="797" selection-end="813" vertical-scroll-proportion="-5.2040815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/DiskiNameController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="5" selection-start="4038" selection-end="4038" vertical-scroll-proportion="-16.52174">
           <folding />
         </state>
       </provider>
@@ -747,12 +727,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/DiskiNameImporterService.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/MobiUserController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="124" selection-start="771" selection-end="771" vertical-scroll-proportion="0.72482014">
-          <folding>
-            <element signature="e#31#80#0" expanded="true" />
-          </folding>
+        <state line="116" column="30" selection-start="4091" selection-end="4091" vertical-scroll-proportion="-18.73913">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/mobiUser/list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="104" selection-start="815" selection-end="815" vertical-scroll-proportion="-5.2040815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/AssignDiskiNamesService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/competitionEntry/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="16" selection-start="3486" selection-end="3486" vertical-scroll-proportion="-7.2244897">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/klipdriftpremiumdiski/CompetitionEntry.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="11" selection-start="524" selection-end="734" vertical-scroll-proportion="-4.8139534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/klipdriftpremiumdiski/CompetitionEntryController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="8" selection-start="5123" selection-end="5123" vertical-scroll-proportion="-15.956522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/klipdriftpremiumdiski/CSVBuilderService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="391" selection-end="391" vertical-scroll-proportion="0.48920864">
+          <folding />
         </state>
       </provider>
     </entry>

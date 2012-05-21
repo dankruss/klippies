@@ -113,4 +113,30 @@ class CompetitionEntryController {
     }
 
 
+    def assignDiskiNames(){
+       def assigner = new AssignDiskiNamesService()
+
+       def dataSet = CompetitionEntry.findAll()
+       assigner.run(dataSet)
+
+       redirect(action: 'list')
+    }
+
+    def sendCSV(){
+        def csvbuilder = new CSVBuilderService()
+
+        def dataSet = CompetitionEntry.findAll()
+
+       csvbuilder.buildCSV(dataSet, 'CompetitionEntry')
+
+        /*response.setHeader("Content-disposition", "attachment; filename=hello.csv")
+        response.contentType = 'Content-type: text/csv'
+        response.outputStream << new FileInputStream(out)
+        response.outputStream.flush()
+        response.outputStream.close() */
+
+
+        redirect(action: 'list')
+    }
+
 }

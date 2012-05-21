@@ -79,6 +79,6 @@
 		<g:message code="competitionEntry.date.label" default="Date" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="date" precision="day"  value="${competitionEntryInstance?.date}"  />
+	<g:textField name="date" precision="day"  value="${competitionEntryInstance?.date}"  />
 </div>
 
