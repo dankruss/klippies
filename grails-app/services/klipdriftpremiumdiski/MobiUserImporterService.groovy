@@ -12,10 +12,16 @@ class MobiUserImporterService {
         def file = new File('temp')
         fileSent.transferTo(file)
 
+
         file.splitEachLine(','){ fields ->
+
+
+            def nickname = (fields[1] != null)? fields[1].replaceAll("\"", "") :  ''
+
+
             def temp = new MobiUser(
                     userId:         fields[0].replaceAll("\"", ""),
-                    nickname:       fields[1].replaceAll("\"", ""),
+                    nickname:       nickname,
                     points:         fields[2].replaceAll("\"", ""),
                     username:       fields[3].replaceAll("\"", ""),
                     mobileNumber:   fields[4].replaceAll("\"", ""),

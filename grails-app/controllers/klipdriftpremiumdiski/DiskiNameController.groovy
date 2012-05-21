@@ -100,4 +100,15 @@ class DiskiNameController {
             redirect(action: "show", id: params.id)
         }
     }
+
+    def importer(){
+
+    }
+
+    def importXLS(){
+        def importer = new DiskiNameImporterService()
+        importer.importFromXLS(params.file)
+        redirect(action: "list")
+    }
+
 }
