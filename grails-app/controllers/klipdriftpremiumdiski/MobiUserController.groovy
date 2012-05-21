@@ -100,4 +100,14 @@ class MobiUserController {
             redirect(action: "show", id: params.id)
         }
     }
+
+    def importer(){
+
+    }
+
+    def importCSV(){
+        def importer = new MobiUserImporterService()
+        importer.importFromCSV(params.file)
+        redirect(action: "list")
+    }
 }

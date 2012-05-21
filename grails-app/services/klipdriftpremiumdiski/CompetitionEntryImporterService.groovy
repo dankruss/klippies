@@ -16,16 +16,6 @@ class CompetitionEntryImporterService {
 
         file.splitEachLine(','){ fields ->
             def temp = new CompetitionEntry(
-            /*
-            competition : fields[0],
-            firstName : fields[1],
-            lastName : fields[2],
-            gender : fields[3],
-            mobileNumber : fields[4],
-            emailAddress : fields[5],
-            region : fields[6],
-            origin : fields[7]
-            */
 
                     competition:fields[0],
                     firstName:fields[1],
