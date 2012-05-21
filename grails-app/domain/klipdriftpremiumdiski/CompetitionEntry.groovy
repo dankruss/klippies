@@ -24,8 +24,7 @@ class CompetitionEntry {
             mobileNumber,
             emailAddress,
             region,
-            origin
-
-    Date date
+            origin,
+            date
 
 }

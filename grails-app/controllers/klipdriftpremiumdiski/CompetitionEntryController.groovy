@@ -101,6 +101,11 @@ class CompetitionEntryController {
         }
     }
 
+    def importer(){
+
+    }
+
+
     def importCSV(){
         def importer = new CompetitionEntryImporterService()
         importer.importFromCSV(params.file)

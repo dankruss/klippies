@@ -1,24 +1,44 @@
 package klipdriftpremiumdiski
 
+import org.springframework.web.multipart.commons.CommonsMultipartFile
+
 class CompetitionEntryImporterService {
 
     def serviceMethod() {
 
     }
 
-    def importFromCSV(String fileName){
-        def temp = new CompetitionEntry()
+    def importFromCSV(CommonsMultipartFile fileSent){
+        def file = new File('temp')
+        fileSent.transferTo(file)
 
-        new File(fileName).splitEachLine(','){ fields ->
-            temp.competition = fields[0]
-            temp.firstName = fields[1]
-            temp.lastName = fields[2]
-            temp.gender = fields[3]
-            temp.mobileNumber = fields[4]
-            temp.emailAddress = fields[5]
-            temp.region = fields[6]
-            temp.origin = fields[7]
-            temp.date = (Date)fields[8]
+
+
+        file.splitEachLine(','){ fields ->
+            def temp = new CompetitionEntry(
+            /*
+            competition : fields[0],
+            firstName : fields[1],
+            lastName : fields[2],
+            gender : fields[3],
+            mobileNumber : fields[4],
+            emailAddress : fields[5],
+            region : fields[6],
+            origin : fields[7]
+            */
+
+                    competition:fields[0],
+                    firstName:fields[1],
+                    lastName:fields[2],
+                    gender:fields[3],
+                    mobileNumber:fields[4],
+                    emailAddress:fields[5],
+                    region:fields[6],
+                    origin:fields[7],
+                    date: fields[8]
+
+                    )
+
 
             temp.save()
         }

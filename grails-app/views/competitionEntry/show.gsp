@@ -108,7 +108,7 @@
 				<li class="fieldcontain">
 					<span id="date-label" class="property-label"><g:message code="competitionEntry.date.label" default="Date" /></span>
 					
-						<span class="property-value" aria-labelledby="date-label"><g:formatDate date="${competitionEntryInstance?.date}" /></span>
+						<span class="property-value" aria-labelledby="date-label"><g:fieldValue bean="${competitionEntryInstance}" field="date" /></span>
 					
 				</li>
 				</g:if>
