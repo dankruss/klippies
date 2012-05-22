@@ -119,4 +119,23 @@ class MobiUserController {
 
         redirect(action: 'list')
     }
+
+    def sendCSV(){
+        def csvbuilder = new CSVBuilderService()
+
+        def dataSet = MobiUser.findAll()
+
+
+        def output = csvbuilder.buildCSV(dataSet, 'MobiUser')
+
+        response.setHeader("Content-disposition", "attachment; filename="+System.nanoTime()+"MobiUsers.csv")
+        response.contentType = "text/csv"
+        response.outputStream << output.toString()
+        response.outputStream.flush()
+        response.outputStream.close()
+
+        redirect(action: 'list')
+
+    }
+
 }

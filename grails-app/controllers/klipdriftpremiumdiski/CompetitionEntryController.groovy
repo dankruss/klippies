@@ -4,6 +4,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class CompetitionEntryController {
 
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -127,14 +128,14 @@ class CompetitionEntryController {
 
         def dataSet = CompetitionEntry.findAll()
 
-       csvbuilder.buildCSV(dataSet, 'CompetitionEntry')
 
-        /*response.setHeader("Content-disposition", "attachment; filename=hello.csv")
-        response.contentType = 'Content-type: text/csv'
-        response.outputStream << new FileInputStream(out)
+        def output = csvbuilder.buildCSV(dataSet, 'CompetitionEntry')
+
+        response.setHeader("Content-disposition", "attachment; filename="+System.nanoTime()+"CompetitionEntries.csv")
+        response.contentType = "text/csv"
+        response.outputStream << output.toString()
         response.outputStream.flush()
-        response.outputStream.close() */
-
+        response.outputStream.close()
 
         redirect(action: 'list')
     }

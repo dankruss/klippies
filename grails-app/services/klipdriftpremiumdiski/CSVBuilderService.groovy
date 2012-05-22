@@ -7,26 +7,24 @@ class CSVBuilderService {
     }
 
     def buildCSV(List dataSet, String version){
-        def out = new File('diskinames_'+version+'.csv')
-
+        String output = ''
 
 
         dataSet.each {
-            System.out.println "/------------------------------- NEW LINE ------------------------------/"
-            //it.properties)
-            // PRINT TO CSV!!!!!
-            /*
             def row = []
-            def that = it
-            it.properties.each{
-                def thisProperty = it.key
-                row.add(that.thisProperty)
-            }    }
-            out.append row.join(',')
-            out.append '\n'  */
-        }
 
-        //return out
+            if (version == 'CompetitionEntry'){
+                 row = [it.competition, it.firstName, it.diskiName, it.lastName, it.gender, it.mobileNumber, it.emailAddress, it.region, it.origin, it.date]
+            }  else {
+                 row = [it.userId, it.nickname, it.diskiName, it.points, it.username, it.mobileNumber, it.emailAddress, it.campaignCode]
+            }
+
+            output = output + row.join(',')
+            output = output + '\n'
+
+        }
+        return output
 
     }
 }
+
