@@ -11,6 +11,7 @@ class MobiUserImporterService {
     def importFromCSV(CommonsMultipartFile fileSent){
         def file = new File('temp')
         fileSent.transferTo(file)
+        def duplicates = 0
 
 
         file.splitEachLine(','){ fields ->
@@ -29,8 +30,14 @@ class MobiUserImporterService {
                     campaignCode:   fields[6].replaceAll("\"", "")
             )
 
-            temp.save()
+            if (MobiUser.findAllByEmailAddress(fields[5]).size()<1){
+                temp.save()
+            } else {
+                duplicates ++
+            }
+
         }
+        System.out.println ("There were " + duplicates + " duplicates")
 
 //        userId(blank: false, nullable: false)
 //        nickname()

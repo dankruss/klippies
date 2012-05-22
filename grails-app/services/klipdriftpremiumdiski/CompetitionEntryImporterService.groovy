@@ -11,6 +11,7 @@ class CompetitionEntryImporterService {
     def importFromCSV(CommonsMultipartFile fileSent){
         def file = new File('temp')
         fileSent.transferTo(file)
+        def duplicates = 0
 
 
 
@@ -29,9 +30,14 @@ class CompetitionEntryImporterService {
 
                     )
 
-
-            temp.save()
+            if (CompetitionEntry.findAllByEmailAddress(fields[5]).size()<1){
+                temp.save()
+            } else {
+               duplicates++
+            }
         }
+
+        System.out.println ("There were " + duplicates + " duplicates")
 
 
     }

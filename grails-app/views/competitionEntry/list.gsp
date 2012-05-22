@@ -14,7 +14,9 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
                 <li><g:link class="create" action="assignDiskiNames">Assign Diski Names</g:link></li>
-                <li><g:link class="create" action="importer">Import Diski Names</g:link></li>
+                <li><g:link class="create" action="importer">Import Competition Entries</g:link></li>
+                <li><g:link class="create" action="sendCSV">Pull CSV File</g:link></li>
+
 			</ul>
 		</div>
 		<div id="list-competitionEntry" class="content scaffold-list" role="main">
